@@ -9,7 +9,8 @@ WORKDIR /app
 # RUN pip3 install jupyterlab
 RUN python3 -m pip install notebook
 
-EXPOSE 8080
+# EXPOSE 8080
+EXPOSE 8888
 
 # CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root", "--NotebookApp.token='1234'"]
 CMD python3 -m notebook --allow-root
