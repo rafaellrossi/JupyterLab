@@ -6,11 +6,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# RUN pip3 install jupyterlab
-RUN python3 -m pip install notebook
+RUN pip3 install jupyterlab
 
-# EXPOSE 8080
-EXPOSE 8888
+EXPOSE 8080
 
-# CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root", "--NotebookApp.token='1234'"]
-CMD python3 -m notebook --allow-root
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--no-browser", "--allow-root", "--NotebookApp.token='1234'"]
