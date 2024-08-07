@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-RUN pip install jupyterlab
+RUN pip3 install jupyterlab
 
 EXPOSE 8080
 
